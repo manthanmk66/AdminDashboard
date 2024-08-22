@@ -9,6 +9,7 @@ import Customer from "./models/Customer.js";
 import Category from "./models/Category.js";
 import Product from "./models/Product.js";
 import Order from "./models/Order.js";
+import User from "./models/User.js";
 
 // Register Mongoose adapter
 AdminJS.registerAdapter(AdminJSMongoose);
@@ -16,6 +17,7 @@ AdminJS.registerAdapter(AdminJSMongoose);
 // Create AdminJS instance with multiple resources
 const adminJs = new AdminJS({
   resources: [
+    { resource: User },
     { resource: Administrator },
     { resource: Customer },
     { resource: Category },
